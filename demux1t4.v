@@ -1,24 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 10.04.2026 09:27:39
-// Design Name: 
-// Module Name: demux1t4
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 
 //1-bit 4:1 DeMux using 1-bit 2:1 Demux
 module demux1t4(din, sel, en, dout);
@@ -38,7 +18,6 @@ demux1t2 Dmux2_2(.din(dfeed2), .sel(sel[1]), .en(1'b1), .dout0(dout[1]), .dout1(
 
 endmodule
 
-//-------------------------------------------------
 module demux1t2(din, dout0, dout1, sel, en);
 input din;
 input sel;
