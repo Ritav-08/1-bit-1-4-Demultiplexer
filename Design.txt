@@ -1,0 +1,37 @@
+`timescale 1ns / 1ps
+
+//1-bit 4:1 DeMux using 1-bit 2:1 Demux
+module demux1t4(din, sel, en, dout);
+input din;
+input en;
+input [1:0]sel;
+output [3:0]dout;
+
+//net(s)
+wire dfeed1; //output of first stage 2:1 DeMux, input for second stage 2:1 Demux
+wire dfeed2; //similarly as dfeed1
+
+//logic- structural representation
+demux1t2 Dmux1_1(.din(din), .sel(sel[0]), .en(en), .dout0(dfeed1), .dout1(dfeed2));
+demux1t2 Dmux2_1(.din(dfeed1), .sel(sel[1]), .en(1'b1), .dout0(dout[0]), .dout1(dout[2]));
+demux1t2 Dmux2_2(.din(dfeed2), .sel(sel[1]), .en(1'b1), .dout0(dout[1]), .dout1(dout[3]));
+
+endmodule
+
+//-------------------------------------------------
+module demux1t2(din, dout0, dout1, sel, en);
+input din;
+input sel;
+input en;
+output dout0;
+output dout1;
+
+//net(s)
+wire bsel;
+
+//logic- structural representation
+not Bsel(bsel, sel); //inverted select signal
+and Out_0(dout0, bsel, en, din); //First output data port
+and Out_1(dout1, sel, en, din); //Second output data port
+
+endmodule

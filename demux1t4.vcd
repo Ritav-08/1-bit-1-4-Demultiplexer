@@ -1,0 +1,243 @@
+$date
+   Fri Apr 10 11:24:23 2026
+$end
+
+$version
+  2025.2
+  $dumpfile ("demux1t4.vcd") 
+$end
+
+$timescale
+  1ps
+$end
+
+$scope module tb_demux1t4 $end
+$var reg 1 ! din $end
+$var reg 1 " en $end
+$var reg 2 # sel [1:0] $end
+$var wire 4 $ dout [3:0] $end
+$scope module DeMux $end
+$var wire 1 % din $end
+$var wire 1 & en $end
+$var wire 2 ' sel [1:0] $end
+$var wire 4 $ dout [3:0] $end
+$var wire 1 ( dfeed1 $end
+$var wire 1 ) dfeed2 $end
+$scope module Dmux1_1 $end
+$var wire 1 % din $end
+$var wire 1 * sel $end
+$var wire 1 & en $end
+$var wire 1 ( dout0 $end
+$var wire 1 ) dout1 $end
+$var wire 1 + bsel $end
+$upscope $end
+$scope module Dmux2_1 $end
+$var wire 1 ( din $end
+$var wire 1 , sel $end
+$var wire 1 - en $end
+$var wire 1 . dout0 $end
+$var wire 1 / dout1 $end
+$var wire 1 0 bsel $end
+$upscope $end
+$scope module Dmux2_2 $end
+$var wire 1 ) din $end
+$var wire 1 , sel $end
+$var wire 1 1 en $end
+$var wire 1 2 dout0 $end
+$var wire 1 3 dout1 $end
+$var wire 1 4 bsel $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+
+#0
+$dumpvars
+x!
+x"
+bx #
+bx $
+x%
+x&
+bx '
+x(
+x)
+x*
+x+
+x,
+1-
+x.
+x/
+x0
+11
+x2
+x3
+x4
+$end
+
+#2000
+0"
+b0 $
+0&
+0(
+0)
+0.
+0/
+02
+03
+
+#10000
+0!
+b0 #
+0%
+b0 '
+0*
+1+
+0,
+10
+14
+
+#12000
+1"
+1&
+
+#15000
+b1 #
+b1 '
+1*
+0+
+0,
+
+#20000
+b10 #
+b10 '
+0*
+1+
+1,
+00
+04
+
+#25000
+b11 #
+b11 '
+1*
+0+
+1,
+
+#30000
+1!
+b0 #
+b1 $
+1%
+b0 '
+1(
+0*
+1+
+0,
+1.
+10
+14
+
+#35000
+b1 #
+b10 $
+b1 '
+0(
+1)
+1*
+0+
+0,
+0.
+12
+
+#40000
+b10 #
+b100 $
+b10 '
+1(
+0)
+0*
+1+
+1,
+1/
+00
+02
+04
+
+#45000
+b11 #
+b1000 $
+b11 '
+0(
+1)
+1*
+0+
+1,
+0/
+13
+
+#50000
+x!
+b0 #
+b0x $
+x%
+b0 '
+x(
+0)
+0*
+1+
+0,
+x.
+10
+03
+14
+
+#55000
+1!
+bx1 #
+bx0x0 $
+1%
+bx1 '
+0(
+1)
+1*
+0+
+x,
+0.
+0/
+x0
+x2
+x3
+x4
+
+#60000
+0!
+b0x #
+b0 $
+0%
+b0x '
+0)
+x*
+x+
+0,
+10
+02
+03
+14
+
+#65000
+1!
+bx #
+bx $
+1%
+bx '
+x(
+x)
+x*
+x,
+x.
+x/
+x0
+x2
+x3
+x4
