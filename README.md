@@ -25,9 +25,9 @@
 
 # Built using three instances of demux1t2 in a 2-stage structure:
 
-# First stage:
+<br>First stage:
 <br>Splits input into two intermediate signals (dfeed1, dfeed2) using sel[0]
-# Second stage:
+<br>Second stage:
 <br>Further splits each feed using sel[1]
 <br>Produces final outputs dout[3:0]
 
@@ -56,7 +56,7 @@
 <br>Normal binary values
 <br>Edge cases with x (unknown states)
 # ✔ Monitoring:
-# Uses $monitor to display:
+Uses $monitor to display:
 <br>Simulation time
 <br>Enable signal
 <br>Input
@@ -70,7 +70,7 @@
 <br>Can be viewed using GTKWave
 # 🔹 How to Run Simulation
 
-# Using Icarus Verilog:
+Using Icarus Verilog:
 
 <br>iverilog -o demux_tb tb_demux1t4.v demux1t4.v
 <br>vvp demux_tb
